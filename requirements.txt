@@ -1,4 +1,4 @@
-
+python-dotenv
 Flask==2.3.*
 python-dotenv
 line-bot-sdk==3.*

@@ -1,0 +1,70 @@
+<!-- static/liff/explain.html -->
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <title>建議解釋圖表</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://unpkg.com/sanitize.css">
+  <style>
+    body {
+      font-family: "Noto Sans TC", sans-serif;
+      margin: 1.5em;
+      background: #f9f9f9;
+      color: #333;
+    }
+    .card {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      padding: 1.2em;
+      margin-bottom: 1.5em;
+    }
+    .title {
+      font-size: 1.2em;
+      font-weight: bold;
+      margin-bottom: 0.5em;
+      color: #2b4f81;
+    }
+    .reason {
+      margin: 0.3em 0;
+      padding-left: 1em;
+      text-indent: -1em;
+    }
+    .highlight {
+      font-weight: bold;
+      color: #c0392b;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="title">💡 AI 建議</div>
+    <div id="suggestion">載入中...</div>
+  </div>
+
+  <div class="card">
+    <div class="title">📍 關鍵因子（類 SHAP）</div>
+    <div id="reasons">載入中...</div>
+  </div>
+
+  <script src="explain.js"></script>
+</body>
+</html>
+
+<!-- static/liff/explain.html -->
+
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <title>解釋說明</title>
+</head>
+<body>
+  <h2>🔍 AI 建議說明</h2>
+  <p id="suggestion">讀取中...</p>
+  <ul id="reasons"></ul>
+
+  <script src="explain.js"></script>
+</body>
+</html>
