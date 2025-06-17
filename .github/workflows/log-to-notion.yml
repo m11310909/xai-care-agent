@@ -1,0 +1,28 @@
+name: Log commit to Notion
+
+on:
+  push:
+    branches:
+      - main  # 或你要監控的分支
+
+jobs:
+  log-to-notion:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Log commit to Notion
+        run: node test_notion.js  # 或你要執行的 JS 檔案
+        env:
+          NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
+          NOTION_DB_ID: ${{ secrets.NOTION_DB_ID }}
